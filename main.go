@@ -33,7 +33,7 @@ func main() {
 		path := file.s
 		fmt.Println(path)
 		dir, file := filepath.Split(path)
-		if err := os.Rename(path, filepath.Join(dir, fmt.Sprintf("%d.%s", i+1, file))); err != nil {
+		if err := os.Rename(path, filepath.Join(dir, fmt.Sprintf("s01e%d.%s", i+1, file))); err != nil {
 			log.Fatal(err)
 		}
 	}
